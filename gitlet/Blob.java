@@ -50,9 +50,8 @@ public class Blob implements Serializable {
      * Any file staged for commit should be `blobified` first
      */
     public static Blob blobifyFile(String filename, File f) {
-        String fileContent = Utils.readContentsAsString(f);
-        String sha1Input = filename + fileContent;
-        return new Blob(Utils.sha1(sha1Input), filename, fileContent);
+        // TODO: choose your blobifyFile method.;
+        return null;
     }
 
 }

@@ -1,6 +1,5 @@
 package gitlet;
 
-import java.io.IOException;
 import java.io.Serializable;
 
 public class Branch implements Serializable {
@@ -22,16 +21,5 @@ public class Branch implements Serializable {
 
     public void setRef(String newref) {
         ref = newref;
-    }
-
-    public static void setInitHead(String newHeadName) {
-        try {
-            if (!Repository.HEAD_STATE.exists()) {
-                Repository.HEAD_STATE.createNewFile();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Utils.writeContents(Repository.HEAD_STATE, newHeadName);
     }
 }

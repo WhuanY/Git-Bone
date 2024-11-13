@@ -15,17 +15,11 @@ import static gitlet.Utils.message;
 public class Commit implements Serializable {
     /** The commit object itself contains all metadata related to the commit */
 
-    /**
-     * The unique identifier of a single Commit.
-     */
+    /** The unique identifier of a single Commit.*/
     private String commitId;
-    /**
-     * The time when the commit is created.
-     */
+    /** The time when the commit is created. */
     private long timeStamp;
-    /**
-     * The message of this Commit.
-     */
+    /** The message of this Commit.*/
     private String message;
     /**
      * Maps containing all snapshots of current version blobs
@@ -43,16 +37,12 @@ public class Commit implements Serializable {
         this.secondParent = "";
     }
 
-    /**
-     * give a commitId based on all current metadata of the currentCommit
-     */
+    /** give a commitId based on all current metadata of the currentCommit */
     public void resetCommitId() {
         this.commitId = Utils.sha1(String.valueOf(timeStamp), message);
     }
 
-    public String getMessage() {
-        return this.message;
-    }
+    public String getMessage() { return this.message; }
 
     public void setMessage(String msg) {
         this.message = msg;
@@ -92,14 +82,6 @@ public class Commit implements Serializable {
 
     public void setSecondParent(Commit secondParent) {
         this.secondParent = secondParent.getCommitId();
-    }
-
-    public void addNewPrecommit(Commit preCommit) {
-        if (this.getFirstParent().equals("")) {
-            firstParent = preCommit.getCommitId();
-        } else {
-            secondParent = preCommit.getCommitId();
-        }
     }
 
     public void printLog() {
