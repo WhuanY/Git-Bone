@@ -133,7 +133,7 @@ Some merges test cases in gradeScope looks weird to me. Should any one getting h
 
 This pic is drawn for fun. Also I wish it helps anyone who wants to getting a faster comprehension for gibone. 
 
-![GitBone_in_a_Fig](imgs/GitBone_in_a_Fig.svg)
+![GitBone_in_a_Fig](imgs/GitBone_in_a_Fig.png)
 
 ## Notes at last
 
