@@ -1,0 +1,26 @@
+# Set up a simple chain of commits and check their log.
+I definitions.inc
+I test06-commit_with_rm.in
++ wug.txt notwug.txt
+> add wug.txt
+<<<
+> commit "change wug.txt to notwug.txt"
+<<<
+> log
+===
+${COMMIT_HEAD}
+change wug.txt to notwug.txt
+
+===
+${COMMIT_HEAD}
+rm wug.txt
+
+===
+${COMMIT_HEAD}
+added wug and hello
+
+===
+${COMMIT_HEAD}
+initial commit
+
+<<<*

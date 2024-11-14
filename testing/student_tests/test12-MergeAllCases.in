@@ -1,0 +1,104 @@
+# Check that we can check out a previous version.
+I definitions.inc
+> init
+<<<
++ A.txt A.txt
++ B.txt B.txt
++ C.txt C.txt
++ D.txt D.txt
++ E.txt E.txt
++ H.txt H.txt
++ I.txt I.txt
++ J.txt J.txt
++ K.txt K.txt
+> add A.txt
+<<<
+> add B.txt
+<<<
+> add C.txt
+<<<
+> add D.txt
+<<<
+> add E.txt
+<<<
+> add H.txt
+<<<
+> add I.txt
+<<<
+> add J.txt
+<<<
+> add K.txt
+<<<
+> commit "split branch"
+<<<
+> status
+${ARBLINES}
+<<<*
+> branch newBranch
+<<<
++ B.txt B1.txt
+> add B.txt
+<<<
+> rm C.txt
+<<<
+> rm E.txt
+<<<
++ G.txt G.txt
+> add G.txt
+<<<
++ H.txt H1.txt
+> add H.txt
+<<<
++ I.txt I1.txt
+> add I.txt
+<<<
+> rm K.txt
+<<<
++ L.txt L.txt
++ M.txt M1.txt
+> add M.txt
+<<<
+> status
+${ARBLINES}
+<<<*
+> commit "head"
+<<<
+> log
+${ARBLINES}
+<<<*
+> checkout newBranch
+<<<
+> status
+${ARBLINES}
+<<<*
++ A.txt A1.txt
+> add A.txt
+<<<
+> rm C.txt
+<<<
+> rm D.txt
+<<<
++ F.txt F.txt
+> add F.txt
+<<<
++ H.txt H2.txt
+> add H.txt
+<<<
++ I.txt I1.txt
+> add I.txt
+<<<
+> rm K.txt
+<<<
++ L.txt L.txt
+> add L.txt
+<<<
++ M.txt M2.txt
+> add M.txt
+<<<
+> commit "givenbranch"
+<<<
+> checkout master
+<<<
+> merge newBranch
+${ARBLINES}
+<<<*

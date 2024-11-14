@@ -1,0 +1,110 @@
+# Check that we can check out a previous version.
+I definitions.inc
+I test10-branching.in
++ bye.txt bye.txt
+> add bye.txt
+<<<
+> commit "bye.txt wug(newwug).txt"
+<<<
+# move current branch back to master
+> status
+${ARBLINES}
+<<<*
+> checkout master
+<<<
+> log
+${ARBLINES}
+<<<*
+> find "version 2 of wug.txt"
+${ARBLINE}
+<<<*
+D V2 "${0}"
+> reset ${V2}
+<<<
+> log
+===
+${COMMIT_HEAD}
+version 2 of wug.txt
+${ARBLINES}
+<<<*
+> branch testbranch
+<<<
+> merge master
+Cannot merge a branch with itself.
+<<<*
++ hello.txt hello.txt
+> add hello.txt
+<<<
+> commit "add hello.txt"
+<<<
+> log
+===
+${COMMIT_HEAD}
+add hello.txt
+
+===
+${COMMIT_HEAD}
+version 2 of wug.txt
+
+===
+${COMMIT_HEAD}
+version 1 of wug.txt
+
+===
+${COMMIT_HEAD}
+initial commit
+
+<<<*
+> merge testbranch
+Given branch is an ancestor of the current branch.
+<<<
+> checkout testbranch
+<<<
+# E hello.txt
+# the above line, if executed, would result in an error
+> merge master
+Current branch fast-forwarded
+<<<
+> log
+${ARBLINES}
+<<<*
+E hello.txt
+> checkout master
+No need to checkout the current branch.
+<<<*
+> merge newwug
+Encountered a merge conflict.
+<<<
+E wug.txt
+E hello.txt
+E bye.txt
+> global-log
+${ARBLINES}
+<<<*
+> log
+===
+${COMMIT_HEAD}
+Merge newwug into master.
+
+===
+${COMMIT_HEAD}
+add hello.txt
+
+===
+${COMMIT_HEAD}
+version 2 of wug.txt
+
+===
+${COMMIT_HEAD}
+version 1 of wug.txt
+
+===
+${COMMIT_HEAD}
+initial commit
+
+<<<*
+> status
+${ARBLINES}
+<<<*
+> checkout newwug
+<<<

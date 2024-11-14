@@ -1,0 +1,54 @@
+# Check that we can check out a previous version.
+I definitions.inc
+I test09-reset.in
+> branch newwug
+<<<
+> checkout newwug
+<<<
+> status
+${ARBLINES}
+<<<*
+# wug.txt(newwug)
++ wug.txt newwug.txt
+> add wug.txt
+<<<
+> status
+${ARBLINES}
+<<<*
+> commit "version 3 of wug.txt"
+<<<
+> status
+${ARBLINES}
+<<<*
+> log
+===
+${COMMIT_HEAD}
+version 3 of wug.txt
+
+===
+${COMMIT_HEAD}
+version 1 of wug.txt
+
+===
+${COMMIT_HEAD}
+initial commit
+<<<*
+# global commit number is 4
+> global-log
+===
+${COMMIT_HEAD}
+${ARBLINE}
+
+===
+${COMMIT_HEAD}
+${ARBLINE}
+
+===
+${COMMIT_HEAD}
+${ARBLINE}
+
+===
+${COMMIT_HEAD}
+${ARBLINE}
+
+<<<*

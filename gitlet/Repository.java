@@ -48,6 +48,7 @@ public class Repository {
 
     public static boolean alreadyInitialized() {
         // TODO
+        return false;
     }
 
     public static void init() {

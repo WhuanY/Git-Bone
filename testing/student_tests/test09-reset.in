@@ -1,0 +1,59 @@
+# Check that we can check out a previous version.
+I definitions.inc
+> init
+<<<
++ wug.txt wug.txt
+> add wug.txt
+<<<
+> commit "version 1 of wug.txt"
+<<<
++ wug.txt notwug.txt
+> add wug.txt
+<<<
+> commit "version 2 of wug.txt"
+<<<
+= wug.txt notwug.txt
+# Each ${COMMIT_HEAD} captures its commit UID.
+> log
+===
+${COMMIT_HEAD}
+version 2 of wug.txt
+
+===
+${COMMIT_HEAD}
+version 1 of wug.txt
+
+===
+${COMMIT_HEAD}
+initial commit
+
+<<<*
+# UID of second version
+D UID2 "${1}"
+# UID of current version
+D UID1 "${2}"
+> checkout ${UID1} -- wug.txt
+<<<
+= wug.txt wug.txt
+> checkout ${UID2} -- wug.txt
+<<<
+= wug.txt notwug.txt
+> reset ${UID1}
+<<<
+> log
+===
+${COMMIT_HEAD}
+version 1 of wug.txt
+
+===
+${COMMIT_HEAD}
+initial commit
+
+<<<*
+> reset c440e5b568dbfeec2ecd01ad10a7f21ffbb5fd5f
+No commit with that id exists.
+<<<*
++ bye.txt bye.txt
+> reset ${UID1}
+There is an untracked file in the way; delete it, or add and commit it first.
+<<<

@@ -1,0 +1,27 @@
+# add two files to stage area and then commit
+> init
+<<<
+E .gitlet
++ wug.txt wug.txt
++ hello.txt hello.txt
+> add wug.txt
+<<<
+> add hello.txt
+<<<
+> commit "added wug and hello"
+<<<
+> add wug.txt
+<<<
+> status
+=== Branches ===
+*master
+
+=== Staged Files ===
+
+=== Removed Files ===
+
+=== Modifications Not Staged For Commit ===
+
+=== Untracked Files ===
+
+<<<

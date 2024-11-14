@@ -55,6 +55,7 @@ public class Helper {
 
     static Branch getCurrentHEADBranch() {
         // TODO
+        return null;
     }
 
     /** This method gets branch from branchName.
@@ -71,7 +72,7 @@ public class Helper {
      */
     static boolean sameAsCurrentCommit(String filename) {
         // TODO
-        return false
+        return false;
     }
 
     /** This method checks any file in the CWD is untracked. A file that is untracked
@@ -118,10 +119,12 @@ public class Helper {
     /** merge Method Collections */
     static Commit commonAncestor(Branch thisBranch, Branch thatBranch) {
         // TODO
+        return null;
     }
 
     static Commit commonAncestor(Commit currentCommit, Commit branchCommit) {
         // TODO
+        return null;
     }
 
     /** Deal with two blobs that will encounter a confilct when merging. Finish 3 steps
