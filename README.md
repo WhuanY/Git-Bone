@@ -8,7 +8,7 @@
          ▐▌                        
 ```
 
-Git-bone is a proven-to-be-practical, baby-git VCS(Version Control System) skeleton code built simply on Java. It is a *encripted*, but nonetheless less painful skeleton code for learners to implement their own `git`.  It is originated from the author's implementation (which is me!) for a git project, all the main codes excluded, only helpful comments left for programming novice and lovers to implement their own git.
+Git-bone is a proven-to-be-practical, baby-git VCS(Version Control System) skeleton code built simply on Java. It is a *encrypted*, but nonetheless less painful skeleton code for learners to implement their own `git`.  It is originated from the author's implementation (which is me!) for a git project, all the main codes excluded, only helpful comments left for programming novice and lovers to implement their own git.
 
 ## Git-Bone is, in fact,  [Gitlet](https://sp21.datastructur.es/materials/proj/proj2/proj2)
 
@@ -16,13 +16,13 @@ Git-Bone is essentially one possible [gitlet](https://sp21.datastructur.es/mater
 
 1. Understand [git](https://git-scm.com/) better.
 
-2. Refining their programming skills better. In terms of
+2. Refining their programming skills. In terms of
 
-   A. Being more comfortable when reading vast amount of documentations. 
+   A. Being more comfortable when reading vast amounts of documentation.
 
-   B. Being more thoughtful when choosing appropriate data structure based on business demands. 
+   B. Being more thoughtful when choosing an appropriate data structure based on business demands.
 
-   C. Being more careful when implementing any core features via a bunch of codes.
+   C. Being more careful when implementing any core features via a bunch of code.
 
 However, dealing with designing classes and methods may be intimidating. `Git-Bone` can help those who want to achieve the above two goals with finishing the [gitlet](https://sp21.datastructur.es/materials/proj/proj2/proj2) with less painful experience.
 
@@ -74,20 +74,20 @@ git clone https://github.com/WhuanY/Git-Bone.git
 cd git-bone
 ```
 
-Step 3: test if can complie by running:
+Step 3: Test if it can compile by running:
 
 ```shell
 make 
 ```
 
-If successful, it should be complied with the following message like this:
+If successful, it should compile with a message like this:
 ```shell
 "/Library/Developer/CommandLineTools/usr/bin/make" -C gitlet default
 javac -g -Xlint:unchecked -Xlint:deprecation -cp "../../library-sp21/javalib/:..::;../../library-sp21/javalib/;..;" Blob.java Branch.java Commit.java DumpObj.java Dumpable.java GitletException.java Helper.java Main.java Repository.java Utils.java
 touch sentinel
 ```
 
-Step 4: See Java files with the following sequence to get basic understanding with git-bone structure:
+Step 4: See Java files in the following sequence to get a basic understanding of the git-bone structure:
 
 ``````
 Main.java -> 
@@ -100,7 +100,7 @@ Step 5: Filling git-bone at your own pace! Remember to read, read and read gitle
 
 Step 6: As you proceed. There are some helpful tests that enable you to test your currently employed features. [See the testing part in gitlet](https://sp21.datastructur.es/materials/proj/proj2/proj2#testing) for more details.
 
-My own implementation(let me call it `my solution` ) has tested on all my self-written integration test files.
+My own implementation has been tested on all my self-written integration test files.
 
 ```shell
 cd testing
@@ -127,17 +127,18 @@ Step 7: Push your code on gradescope. Noted that passing all the 19 local tests 
 
 ![Gradescope_pass_tests](imgs/Gradescope_pass_tests.png)
 
-Some merges test cases in gradeScope looks weird to me. Should any one getting higher score than me. You are totally welcome to submit a pull request.
+Some merges test cases in gradeScope looks weird to me. Should anyone get a higher score than me, you are totally welcome to submit a pull request.
 
 ## Git-bone in One Figure
 
-This pic is drawn for fun. Also I wish it helps anyone who wants to getting a faster comprehension for gibone. 
+This pic is drawn for fun. Also, I hope it helps anyone who wants to gain a quicker understanding of Git-Bone.
 
 ![GitBone_in_a_Fig](imgs/GitBone_in_a_Fig.jpg)
 
 ## Notes at last
 
-This is just ONE POSSIBLE implementation! Git-Bone is set and shared for inspiration. There are some already-known optimazation techniques for such. Feel free to jump out of framework made by `git-bone`.
+1. If you are intersted in the project. First try on your own with only necessary but not additional help.
+2. This is just ONE POSSIBLE implementation! Git-Bone is set and shared for inspiration. There are some already-known optimazation techniques for currently implemented solution. Feel free to jump out of framework made by `Git-Bone`.
 
 ## Acknowledgment
 
