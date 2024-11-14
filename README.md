@@ -28,7 +28,7 @@ However, dealing with designing classes and methods may be intimidating. `Git-Bo
 
 ----
 
-**BUT IT IS STRONGLY SUGGESTED YOU TRY TO FINISH IT <u>PURELY</u> ON [THE OFFICIAL PROJECT DOCUMENTATION ON GITLET](Choose appropriate data structure based on business demands. )!**
+**BUT IT IS STRONGLY SUGGESTED YOU TRY TO FINISH IT <u>PURELY</u> ON [THE OFFICIAL PROJECT DOCUMENTATION ON GITLET](https://sp21.datastructur.es/materials/proj/proj2/proj2))!**
 
 ----
 
