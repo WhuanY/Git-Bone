@@ -71,7 +71,7 @@ Step 2: If you believe you cannot finish all features (for lacking coding skills
 
 ```shell
 git clone https://github.com/WhuanY/Git-Bone.git
-cd git-bone
+cd Git-Bone
 ```
 
 Step 3: Test if it can compile by running:
