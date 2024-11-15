@@ -51,7 +51,7 @@ The gitlet version is the [CS61B-sp21](https://sp21.datastructur.es/).
 
 ### Grader
 
-The grader for testing your code is on gradescope. Detailed info is in [CS61B-sp21-acknowledgement](https://sp21.datastructur.es/about.html#acknowledgements. For convenience I just copied it:
+The grader for testing your code is on gradescope. Detailed info is in [CS61B-sp21-acknowledgement](https://sp21.datastructur.es/about.html#acknowledgements). For convenience I just copied it:
 
 > #### Auditing
 >
